@@ -26,15 +26,20 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Net.Http;
+using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using MCSkin3D.Controls;
 using MCSkin3D.Forms;
+using MCSkin3D.Http.MojangAPI;
 using MCSkin3D.Languages;
 using MCSkin3D.Macros;
 using MCSkin3D.Properties;
+using MCSkin3D.Utils;
 using Microsoft.VisualBasic.FileIO;
 using MultiPainter;
+using Newtonsoft.Json;
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
@@ -55,7 +60,6 @@ namespace MCSkin3D
 	public partial class Editor : Form
 	{
 		#region Variables
-
 		private static readonly ShortcutEditor _shortcutEditor = new ShortcutEditor();
 		private List<BackgroundImage> _backgrounds = new List<BackgroundImage>();
 		private Dictionary<Size, Texture> _charPaintSizes = new Dictionary<Size, Texture>();
@@ -2426,6 +2430,58 @@ namespace MCSkin3D
 			}
 		}
 
+		private User FetchMinecraftUser(string username)
+		{
+			HttpClient client = new HttpClient();
+
+			// Is not necessary at all to create an array for one username,
+			// but mojang only accepts an array of usernames, mojang just being mojang...
+			string[] payload = {username};
+			
+			HttpContent payloadContent = new StringContent(JsonConvert.SerializeObject(payload), Encoding.UTF8, "application/json");
+
+			HttpResponseMessage response = client.PostAsync("https://api.mojang.com/profiles/minecraft", payloadContent).GetAwaiter().GetResult();
+
+			if (!response.IsSuccessStatusCode)
+			{
+				return null;
+			}
+			
+			try
+			{
+				User[] users = JsonConvert.DeserializeObject<User[]>(response.Content.ReadAsStringAsync().GetAwaiter().GetResult());
+
+				return users?[0];
+			}
+			catch (Exception e)
+			{
+				return null;
+			} 
+		}
+
+		private Profile FetchMinecraftUserProfile(User user)
+		{
+			HttpClient client = new HttpClient();
+			HttpResponseMessage response = client.GetAsync("https://sessionserver.mojang.com/session/minecraft/profile/" + user.Id).GetAwaiter().GetResult();
+			
+			if (!response.IsSuccessStatusCode)
+			{
+				return null;
+			}
+			
+			try
+			{
+				Profile profile = JsonConvert.DeserializeObject<Profile>(response.Content.ReadAsStringAsync().GetAwaiter().GetResult());
+
+				return profile;
+
+			}
+			catch (Exception e)
+			{
+				return null;
+			} 
+		}
+
 		public void PerformImportFromSite()
 		{
 			if (!treeView1.Enabled)
@@ -2434,9 +2490,26 @@ namespace MCSkin3D
 			string accountName = _importFromSite.Show();
 
 			if (string.IsNullOrEmpty(accountName))
+			{
 				return;
+			}
 
-			string url = "http://s3.amazonaws.com/MinecraftSkins/" + accountName + ".png";
+				User user = FetchMinecraftUser(accountName);
+
+			if (user == null)
+			{
+				MessageBox.Show(this, accountName + " is not a valid minecraft username. Make sure you entered the name correctly and that the user is a valid user.");
+				return;
+			}
+
+			Profile profile = FetchMinecraftUserProfile(user);
+
+			string texture = Base64.Decode(profile.Properties[0].Value);
+
+			MCTexture mcTexture = JsonConvert.DeserializeObject<MCTexture>(texture);
+
+			string url = mcTexture.Textures.SKIN.Url;
+			
 
 			string folderLocation;
 			TreeNodeCollection collection;

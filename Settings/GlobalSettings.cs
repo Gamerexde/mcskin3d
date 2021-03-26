@@ -85,7 +85,7 @@ namespace MCSkin3D
 		public static Color BackgroundColor { get; set; }
 
 		[Savable]
-		[DefaultValue(true)]
+		[DefaultValue(false)]
 		public static bool AutoUpdate { get; set; }
 
 		[Savable]

@@ -7,3 +7,11 @@ C:\Users\Paril\Documents\GitHub\mcskin3d\Resources\ThirdParty.pdb
 C:\Users\Paril\Documents\GitHub\mcskin3d\ThirdParty\obj\Debug\ThirdParty.dll
 C:\Users\Paril\Documents\GitHub\mcskin3d\ThirdParty\obj\Debug\ThirdParty.pdb
 C:\Users\Paril\Documents\GitHub\mcskin3d\ThirdParty\obj\Debug\ThirdParty.csprojResolveAssemblyReference.cache
+C:\Users\Gamerexde\Development\mcskin3d\Resources\ThirdParty.dll
+C:\Users\Gamerexde\Development\mcskin3d\Resources\ThirdParty.pdb
+C:\Users\Gamerexde\Development\mcskin3d\ThirdParty\obj\Debug\ThirdParty.csprojAssemblyReference.cache
+C:\Users\Gamerexde\Development\mcskin3d\ThirdParty\obj\Debug\ThirdParty.csproj.CoreCompileInputs.cache
+C:\Users\Gamerexde\Development\mcskin3d\ThirdParty\obj\Debug\ThirdParty.dll
+C:\Users\Gamerexde\Development\mcskin3d\ThirdParty\obj\Debug\ThirdParty.pdb
+C:\Users\Gamerexde\Development\mcskin3d\bin\ThirdParty.dll
+C:\Users\Gamerexde\Development\mcskin3d\bin\ThirdParty.pdb

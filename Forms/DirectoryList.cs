@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
-using DaveChambers.FolderBrowserDialogEx;
 using Paril.Controls;
 
 namespace MCSkin3D.Forms
@@ -31,11 +30,13 @@ namespace MCSkin3D.Forms
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			var browser = new FolderBrowserDialogEx();
+			var browser = new FolderBrowserDialog();
 			browser.SelectedPath = lastDir;
 			browser.ShowNewFolderButton = true;
+			/*
 			browser.ShowEditbox = true;
 			browser.StartPosition = FormStartPosition.CenterParent;
+			*/
 
 			if (browser.ShowDialog(this) == DialogResult.OK)
 			{

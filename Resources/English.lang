@@ -1,0 +1,302 @@
+﻿// C-style comments.
+// First non-comment line must be the following:
+MCSkin3D Language File
+// Following lines are key-value pairs, stored by the program.
+// A line beginning with the pound/sharp/hash sign # are
+// used internally and are not actual language pieces.
+#Name=English
+// Version is the version of the language file - it does not
+// have any effect other than identification, and does not
+// need to be present.
+#Version=1.0
+// SuppVersion is short for Supported Version, and denotes the version in which this
+// language file was made for. Any other version running this file will throw an error.
+#SuppVersion=1.4
+// Culture is the Windows culture ID for the language.
+// This is REQUIRED to be set properly!
+#Culture="en"
+
+// These lines are not required, they are simply for identification
+// purposes.
+#Author="Paril"
+#AuthorContact="paril@alteredsoftworks.com"
+#AuthorSite="www.alteredsoftworks.com"
+
+// Below this are the key-value pairs; ID=String
+// Note that the quotes are not required, but may be used for readability purposes.
+// Language developers should use this file, and not other languages, to determine the
+// context in which the string is deriving - otherwise, you may lose accuracy of your
+// translation over time (see TranslationParty).
+C_OK="OK"
+C_CANCEL="Cancel"
+C_CLOSE="Close"
+C_COPYTOCLIPBOARD="Copy to Clipboard"
+
+M_FILE="File"
+	M_SAVE="Save"
+	M_SAVEAS="Save As"
+	M_SAVEALL="Save All"
+	M_UPLOAD="Upload skin..."
+	M_EXIT="Exit"
+M_EDIT="Edit"
+	M_UNDO="Undo"
+	M_REDO="Redo"
+	M_TOOL="Tool"
+M_VIEW="View"
+	M_MODE="View mode"
+		M_PERSPECTIVE="Perspective (3D)"
+		M_TEXTURE="Texture (2D)"
+		M_HYBRID="Hybrid"
+	M_3D="3D Settings"
+		M_ANIMATE="Animate"
+		M_FOLLOWCUR="Follow Cursor"
+		M_GRASS="Grass"
+		M_GHOST="Ghost Hidden Parts"
+		M_MULTISAMPLING="Multisampling"
+	M_2D="2D Settings"
+		M_ALPHACHECKER="Alpha Checkerboard"
+		M_OVERLAY="Overlay"
+			M_ENABLEOVERLAY="Enable"
+	M_TRANSMODE="Transparency Mode"
+		M_OFF="Off"
+		M_HELMETONLY="Helmet Only"
+		M_ALL="All"
+	M_VISIBLEPARTS="Visible Parts"
+		M_HEAD="Head"
+		M_HELMET="Helmet"
+		M_CHEST="Chest"
+		M_LEFTARM="Left Arm"
+		M_RIGHTARM="Right Arm"
+		M_LEFTLEG="Left Leg"
+		M_RIGHTLEG="Right Leg"
+M_OPTIONS="Options"
+	M_KEYSHORTCUTS="Keyboard Shortcuts"
+	M_BGCOLOR="Background Color"
+	M_USETEXTUREBASES="Use Base Textures"
+M_LANGUAGE="Language"
+M_HELP="Help"
+	M_CHECKUPDATES="Check For Updates"
+	M_AUTOUPDATE="Automatically Check For Updates"
+
+T_TREE_ZOOMOUT="Zoom Out"
+T_TREE_ZOOMIN="Zoom In"
+T_TREE_IMPORTHERE="Import Here..."
+T_TREE_NEWFOLDER="New Folder Here..."
+T_TREE_RENAME="Rename..."
+T_TREE_DELETE="Delete..."
+T_TREE_CLONE="Clone"
+T_TREE_UPLOAD="Upload"
+
+T_SAVE="Save"
+T_SAVEALL="Save All"
+T_UNDO="Undo"
+T_REDO="Redo"
+T_PERSPECTIVE="Perspective"
+T_TEXTURE="Texture"
+T_HYBRID="Hybrid"
+T_SCREENSHOT="Screenshot (hold shift to save)"
+T_TOGGLEHEAD="Toggle Head"
+T_TOGGLEHELMET="Toggle Helmet"
+T_TOGGLECHEST="Toggle Chest"
+T_TOGGLELEFTARM="Toggle Left Arm"
+T_TOGGLERIGHTARM="Toggle Right Arm"
+T_TOGGLELEFTLEG="Toggle Left Leg"
+T_TOGGLERIGHTLEG="Toggle Right Leg"
+T_SWATCHES="Swatches"
+
+M_IMPORT_HERE="Import Here..."
+M_NEWFOLDER="New Folder"
+M_NEWFOLDER_HERE="New Folder Here..."
+M_RENAME="Rename..."
+M_DELETE="Delete..."
+M_CLONE="Clone"
+
+T_TOOL_CAMERA="Camera"
+T_TOOL_PENCIL="Pencil"
+T_TOOL_ERASER="Eraser"
+T_TOOL_DROPPER="Dropper"
+T_TOOL_DODGEBURN="Dodge/Burn"
+T_TOOL_DARKENLIGHTEN="Darken/Lighten"
+T_TOOL_BUCKET="Fill Bucket"
+T_TOOL_NOISE="Noise"
+
+B_MSG_DIRMISSING="An included directory was missing - usually this is because you didn't extract the program. While not a critical issue, you will be missing any included templates, swatches or other content."
+B_MSG_UPTODATE="You have the latest and greatest version!"
+B_MSG_NEWUPDATE="New updates are available! Open the updater now to view available updates?"
+B_MSG_UPLOADERROR="Error uploading skin:"
+B_MSG_UPLOADSUCCESS="Skin upload success! Enjoy!"
+B_MSG_DELETESKIN="Delete this skin?\r\nIt will be sent to the Recycle Bin."
+B_MSG_DELETEFOLDER="Delete this folder?\r\nIt will be sent to the Recycle Bin."
+B_MSG_OVERLAYERROR="Unable to load overlay image: "{0}"; is the resolution a power of two?"
+B_MSG_UPLOADRES="While you can edit high resolution textures with MCSkin3D, you cannot upload them to your Minecraft profile."
+B_MSG_ANTIALIAS="Restart MCSkin3D to apply multisampling options."
+B_MSG_PIXELFORMAT="Sorry, but apparently your video card doesn't support a 32-bit pixel format - this is required, at the moment, for proper functionality of MCSkin3D."
+B_MSG_SHORTCUTEXISTS="Shortcut "{0}" has the same key as "{1}" - blanking it."
+
+B_CAP_QUESTION="Question"
+B_CAP_SORRY="Sorry"
+
+C_SQUARE="Square"
+C_CIRCLE="Circle"
+
+O_EXPOSURE="Exposure:"
+O_INCREMENTAL="Incremental"
+O_LIGHTEN="Lighten"
+O_DARKEN="Darken"
+O_DODGE="Dodge"
+O_BURN="Burn"
+Q_THRESHOLD="Threshold:"
+
+C_NEW="New"
+C_CANTMOVE="Can't move to"
+C_COPY="Copy"
+C_MOVE="Move"
+C_MOVED="Moved"
+C_COPYTO="Copy to"
+C_MOVETO="Move to"
+C_IMPORTTO="Import to"
+
+C_SETTINGSFAILED="Settings file failed to load; as a result, the default settings were loaded."
+
+C_AUTOLOGIN="Auto-login?"
+C_REMEMBER="Remember me?"
+C_USERNAME="Username:"
+C_PASSWORD="Password:"
+C_UPLOADTEXT="To upload your skin, you need to log in to Minecraft.net. This program can automate this process; enter your username and password to continue."
+
+C_UPLOADING="Uploading your skin! Please wait..."
+C_SHORTCUTINUSE="Shortcut already in use by"
+
+S_TREEVIEW_ZOOMIN="Treeview Zoom In"
+S_TREEVIEW_ZOOMOUT="Treeview Zoom Out"
+S_SWATCH_ZOOMIN="Swatch Zoom In"
+S_SWATCH_ZOOMOUT="Swatch Zoom Out"
+S_COLORSWAP="Swap Foreground/Background Colors"
+S_RENAME="Change Name"
+S_CLONE="Clone node"
+S_DELETE="Delete node"
+S_SCREENSHOT_CLIP="Screenshot to Clipboard"
+S_SCREENSHOT_SAVE="Screenshot to Save"
+S_TOGGLEVIEW="Toggle View Mode"
+S_TOGGLETRANS="Toggle Transparency Mode"
+
+M_SHORTCUTS="Click in the textbox below and hit the keys you wish to assign to this shortcut."
+W_OPTIONS="Tool Options"
+
+T_CAMERA="Left mouse to rotate. Right mouse/mouse wheel to zoom."
+T_PENCIL="Left mouse to paint. Right/Middle mouse to rotate/zoom. Shift to use background color."
+T_DROPPER="Left mouse to pick color. Right/Middle mouse to rotate/zoom. Shift to pick to background, otherwise foreground.
+T_DODGEBURN="Left mouse to dodge/burn. Right/Middle mouse to rotate/zoom. Shift to swap tool."
+T_DARKENLIGHTEN="Left mouse to lighten/darken. Right/Middle mouse to rotate/zoom. Shift to swap tool."
+T_ERASER="Left mouse to erase to blank color and alpha. Right/Middle mouse to rotate/zoom."
+T_FILL="Left mouse to fill pixel. Shift to use background color. Hold Ctrl to lock to part. Right/Middle mouse to rotate/zoom."
+T_NOISE="Left mouse to apply noise. Right/Middle mouse to rotate/zoom."
+
+C_UNSAVED="You have unsaved changes, are you sure you want to quit?"
+C_UNSAVED_CAPTION="Wait!"
+
+O_HOLDNESS="Holdness:"
+
+G_BRUSH="Brush"
+G_BRUSHOPTS="Brush Options"
+G_NOISEOPTS="Noise Options"
+G_FILLOPTS="Fill Options"
+G_TOOL="Tool"
+
+T_DECRES="Decrease Resolution"
+T_INCRES="Increase Resolution"
+
+M_NEWSKIN="New Skin"
+M_NEWSKIN_HERE="New Skin Here"
+
+M_SKINERROR="Unable to download the skin from the Minecraft skin storage!"
+M_FETCH_NAME="Fetch from Minecraft"
+M_FETCH_TEXT="MCSkin3D can fetch a skin from your (or anybody's) Minecraft account and import it as a skin. Enter the name of the account below, and hit Import to do it!"
+M_PLAYER_NAME="Player Name:"
+
+C_YES="Yes"
+C_NO="No"
+D_DONTASK="Don't ask again"
+M_IRREVERSIBLE="Note: High resolution skins CANNOT be uploaded to Minecraft.net as skins!\n\nThis operation is irreversible, and will cause a loss of Undo/Redo functionality up to this point. Are you sure you want to perform this operatio"
+
+M_TEMP="You are attempting to run MCSkin3D from a temporary location. Please extract the program properly to run."
+
+T_RESETCAMERA="Reset Cameras"
+M_SKINDIRS="Skin Directories"
+M_DYNAMICOVERLAY="Dynamic Overlay"
+M_DYNAMICOPTIONS="Dynamic Options"
+M_LINECOLOR="Line Color"
+M_LINESIZE="Line Size"
+M_OVERLAYTEXTSIZE="Text Size"
+M_TEXTCOLOR="Text Color"
+
+U_PIXELSCHANGED="Changed Pixels"
+T_TOOL_STAMP="Stamp"
+T_STAMP="Left click to stamp. Hold shift and click to copy a region to your brush."
+L_UNDOACTIONS="Undo {0} actions"
+L_REDOACTIONS="Redo {0} actions"
+
+M_BROWSE="Browse to {0} location"
+M_SKIN="skin"
+M_FOLDER="folder"
+
+M_SHARED="Shared Options"
+M_INFINITEMOUSE="Infinite Mouse"
+
+T_SWATCHEDIT="Edit Swatches"
+T_DELETESWATCH="Delete Swatch"
+T_ADDSWATCH="Add Swatch"
+
+M_EXPT_EXCEPTION="An exception has occured!"
+M_EXPT_APPERROR="Application Error!"
+M_EXPT_ERRORTEXT="MCSkin3D encountered an error, and may become unstable. However, fear not, as there is something you can do to help!\r\n\r\nIf you wish to help the developers, please send us an error report! At the far bottom of this window is a blue link which leads you to the contents of an error report. Sending this to us (search for us on PlanetMinecraft) will help development greatly!"
+M_EXPT_SHOW="Don't show this again"
+M_EXPT_CLOSE="Close"
+M_EXPT_VIEW="To view the report, click"
+M_EXPT_HERE="here."
+
+C_RESTART="The program needs to restart before you can do this!"
+C_RESTART_CAPTION="Restart required"
+D_UNSAVED="You have unsaved skins; changing skin directories requires a refresh of the skins list, and as such you will lose any unsaved changes. Click Yes to refresh without saving; click No to wait until restart; click Cancel to cancel."
+D_UNSAVED_CAPTION="Unsaved changes"
+
+M_RENDERSTATS="Render Stats"
+M_GRIDCOLOR="Grid Color"
+M_GRIDOPACITY="Grid Opacity"
+
+M_LOADING="Loading..."
+M_NEWPALETTE="New Swatch Palette"
+M_DELETEPALETTE="Delete Swatch Palette"
+M_CONVERTSWATCH="Convert Swatch Palette..."
+M_RENAMEPALETTE="Rename Swatch Palette"
+M_CURRENTFORMAT="Current Format:"
+M_NEWFORMAT="New Format:"
+M_SWATCHQUESTION="This will delete this swatch palette permanently. Continue?"
+M_SWATCHQUESTION_CAPTION="Are you sure?"
+
+M_UPDATESTARTING="Updates downloaded - MCSkin3D will now close, and the update program will open. Please note that this program is ran from your Temp folder, and as such Windows (or your anti-virus software) may complain about it - do not worry, as it is simply to keep the main directory clean from update files."
+M_REPORTVIEWER="Report Viewer"
+
+M_GRIDENABLED="Show Grid"
+M_RENDERRESTART="A restart is required in order to change your rendering mode."
+M_RENDERER="Renderer"
+M_CLIENTARRAYS="Client Arrays"
+M_IMMEDIATE="Immediate Mode"
+W_POPOUT="Popout"
+
+E_SKINERROR="There was an error attempting to load the skin "{0}"; please delete this file or move it outside of the folder."
+T_TOGGLECHESTARMOR="Toggle Chest Armor"
+T_TOGGLELEFTARMARMOR="Toggle Left Arm Armor"
+T_TOGGLERIGHTARMARMOR="Toggle Right Arm Armor"
+T_TOGGLELEFTLEGARMOR="Toggle Left Leg Armor"
+T_TOGGLERIGHTLEGARMOR="Toggle Right Leg Armor"
+
+M_CHESTARMOR="Chest Armor"
+M_LEFTARMARMOR="Left Arm Armor"
+M_RIGHTARMARMOR="Right Arm Armor"
+M_LEFTLEGARMOR="Left Leg Armor"
+M_RIGHTLEGARMOR="Right Leg Armor"
+
+C_SCALE="Scale"
+C_CROP="Crop"
+M_SKINSIZEMISMATCH="This skin's size does not match the expected size from the selected model. MCSkin3D can work around this one of two ways:\n\nCrop: Simply set the skin size to match the model size without modifying the skin itself. Note that this may crop off parts of your skin depending on the size difference. If you're converting a skin from 1.7 to 1.8, USE THIS OPTION.\n\nScale: Scale the skin to fit the requested size.\n\nNote that this is a DESTRUCTIVE OPERATION and CANNOT BE UNDONE."
