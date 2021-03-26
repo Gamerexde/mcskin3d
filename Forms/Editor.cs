@@ -1393,6 +1393,10 @@ namespace MCSkin3D
 		private void CalculateMatrices()
 		{
 			Rectangle viewport = GetViewport3D();
+
+			if (viewport.Width == 0) viewport.Width = 1;
+			if (viewport.Height == 0) viewport.Height = 1;
+			
 			_projectionMatrix = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45), viewport.Width / (float)viewport.Height, 8, 512);
 
 			viewport = GetViewport2D();
